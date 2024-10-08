@@ -1,0 +1,19 @@
+.crewList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crewCard {
+  flex-basis: 18%;
+}
+
+.crewCard img {
+  width: 50%;
+}
+.crewDescription {
+  text-align: justify;
+}
+.crewHeading {
+  text-align: justify;
+  padding: 10px;
+}
