@@ -53,3 +53,10 @@
   padding-block: var(--spacing-04);
   margin-bottom: 10px;
 }
+.icon {
+  margin-inline-end: 10px;
+}
+.pagesList {
+  list-style-type: none;
+  line-height: 1.5;
+}
