@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import PlanetCard from "./PlanetCard";
-
 import PlanetWishlistItem from "./PlanetWishlistItem/PlanetWishlistItem";
 
 import { AddWishlistItem } from "@/components/destination/AddWishlistItem";
@@ -11,11 +10,6 @@ import { AddWishlistItem } from "@/components/destination/AddWishlistItem";
 // Move this to its own file
 
 export const Destinations = () => {
-  const [selectedPlanets, onAddPlanet] = useState([]);
-
-  let numberOfPlanets = selectedPlanets.length;
-  let isPlanetSelected = numberOfPlanets > 0;
-
   const planets = [
     {
       name: "Europa",
@@ -42,7 +36,14 @@ export const Destinations = () => {
       thumbnail: "/destination/image-titan.png",
     },
   ];
+  const [selectedPlanets, onAddPlanet] = useState(planets.map((planet) => planet.name));
 
+  let numberOfPlanets = selectedPlanets.length;
+  let isPlanetSelected = numberOfPlanets > 0;
+
+  
+  
+  
   const onAddOrRemovePlanet = (name, index) => {
     if (selectedPlanets.includes(name)) {
       onAddPlanet(selectedPlanets.filter((planet) => planet !== name));

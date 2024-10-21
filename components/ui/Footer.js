@@ -31,19 +31,15 @@ export const Footer = () => {
         <h3>Pages</h3>
         <ul className={styles.pagesList}>
           <li>
-            {" "}
             <Link href="/">Home</Link>{" "}
           </li>
           <li>
-            {" "}
             <Link href="/about_us">About Us</Link>{" "}
           </li>
           <li>
-            {" "}
             <Link href="/destination">Destination</Link>{" "}
           </li>
           <li>
-            {" "}
             <Link href="/nasa_collaboration">NASA Collaboration</Link>{" "}
           </li>
         </ul>
