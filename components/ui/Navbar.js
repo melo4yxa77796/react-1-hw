@@ -1,7 +1,7 @@
 "use client";
-import classNames from "classnames";
+
 import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { NavLink } from "./NavLink";
 
 import styles from "./Navbar.module.css";
 
@@ -19,18 +19,6 @@ const navbarItems = [
     link: "/nasa_collaboration",
   },
 ];
-
-const NavItem = ({ title, link, isActive }) => {
-  return (
-    <li
-      className={classNames(styles.navbarLinks, {
-        [styles.isLinkActive]: isActive,
-      })}
-    >
-      <Link href={link}>{title}</Link>
-    </li>
-  );
-};
 
 export const Navbar = () => {
   const currentPath = usePathname();
@@ -50,9 +38,9 @@ export const Navbar = () => {
           {/* Create a <NavItem> component, which accepts the following:  */}
           {/* title, link, isActive  */}
 
-          {navbarItems.map((item) => (
-            <NavItem
-              key={item.title}
+          {navbarItems.map((item, index) => (
+            <NavLink
+              key={index}
               title={item.title}
               link={item.link}
               isActive={currentPath === item.link}

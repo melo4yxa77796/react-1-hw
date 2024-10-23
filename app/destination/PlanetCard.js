@@ -17,7 +17,7 @@ const PlanetCard = ({
         </h2>
         <p>{description}</p>
       </div>
-      <button className="roundButton" onClick={() => onAddOrRemovePlanet(name)}>
+      <button className="roundButton" onClick={() => onAddOrRemovePlanet()}>
         {isSelected ? "REMOVE" : "ADD PLANET"}
       </button>
     </div>

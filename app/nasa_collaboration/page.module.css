@@ -4,9 +4,24 @@
   height: 100vh;
 }
 
-
-.nasaPicOfTheDayImg {
-  width: auto;
+.astronomyPicOfTheDay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.roverPhotos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.roverPhotos img {
+  object-fit: cover;
+  width: 480px;
+  height: 340px;
+}
+.video {
+  border: none;
+  width: 100%;
+  max-width: 600px;
   height: 400px;
-
 }
